@@ -6,3 +6,7 @@
   height: 5rem;
   border-bottom: 1px solid #cbd5e1;
 }
+
+.notification_svg:hover{
+  fill: #1668e3;
+}

@@ -15,7 +15,7 @@ export const PlaneSvg = ({ className, props }) => {
 export const Stays = ({ className }) => {
   return (
     <svg
-      class={className}
+      className={className}
       width={24}
       height={24}
       aria-describedby="menu-link-lob_hotels-description"
@@ -31,7 +31,6 @@ export const Stays = ({ className }) => {
 export const Cars = ({ className }) => {
   return (
     <svg
-      class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three"
       aria-describedby="menu-link-lob_cars-description"
       role="img"
       width={24}
@@ -47,7 +46,6 @@ export const Cars = ({ className }) => {
 export const Packages = ({ className }) => {
   return (
     <svg
-      class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three"
       aria-describedby="menu-link-lob_packages-description"
       role="img"
       viewBox="0 0 24 24"
@@ -63,7 +61,6 @@ export const Packages = ({ className }) => {
 export const ThingsTodo = ({ className }) => {
   return (
     <svg
-      class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three"
       aria-describedby="menu-link-lob_activities-description"
       role="img"
       viewBox="0 0 24 24"
@@ -79,7 +76,6 @@ export const ThingsTodo = ({ className }) => {
 export const Cruses = ({ className }) => {
   return (
     <svg
-      class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three"
       aria-describedby="menu-link-lob_cruise-description"
       role="img"
       viewBox="0 0 24 24"
@@ -95,7 +91,6 @@ export const Cruses = ({ className }) => {
 export const Flight = ({ className }) => {
   return (
     <svg
-      class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three"
       aria-describedby="menu-link-lob_flights-description"
       width={20}
       height={24}
@@ -104,6 +99,43 @@ export const Flight = ({ className }) => {
     >
       <desc id="menu-link-lob_flights-description">Flights</desc>
       <path d="m3.64 14.26 2.86.95 4.02-4.02-8-4.59 1.16-1.16c.1-.1.26-.14.41-.1l9.3 2.98c1.58-1.58 3.15-3.2 4.77-4.75.31-.33.7-.58 1.16-.73.45-.16.87-.27 1.25-.34.55-.05.98.4.93.93-.07.38-.18.8-.34 1.25-.15.46-.4.85-.73 1.16l-4.75 4.78 2.97 9.29c.05.15 0 .29-.1.41l-1.17 1.16-4.57-8.02L8.8 17.5l.95 2.84L8.6 21.5l-2.48-3.62L2.5 15.4l1.14-1.14z"></path>
+    </svg>
+  );
+};
+
+export const Notification = ({ className, fill }) => {
+  return (
+    <svg
+      className={className}
+      fill={fill}
+      aria-label="Communication Center icon"
+      role="img"
+      viewBox="0 0 24 24"
+      width={24}
+      height={28}
+    >
+      <title id="notifications-icon-title">Communication Center icon</title>
+      <path
+        fill-rule="evenodd"
+        d="M18 11v5l2 2v1H4v-1l2-2v-5c0-3.08 1.63-5.64 4.5-6.32V4a1.5 1.5 0 1 1 3 0v.68C16.36 5.36 18 7.93 18 11zm-4 9a2 2 0 1 1-4 0h4z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+  );
+};
+
+export const Menu = ({ className }) => {
+  return (
+    <svg
+      width={25}
+      height={35}
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="#0F0F0F"
+        d="M1 12a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM1 4a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM1 20a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1Z"
+      />
     </svg>
   );
 };

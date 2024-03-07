@@ -1,4 +1,6 @@
 import Logo from "./Logo";
+import MobileView from "./MobileView";
+import Right from "./Right";
 import ShopTravel from "./ShopTravel/ShopTravel";
 import styles from "./styles.module.css";
 
@@ -10,7 +12,10 @@ const Header = () => {
           <Logo />
           <ShopTravel />
         </div>
-        <div>right</div>
+        <Right />
+
+        {/* MobileView */}
+        <MobileView />
       </div>
     </header>
   );
