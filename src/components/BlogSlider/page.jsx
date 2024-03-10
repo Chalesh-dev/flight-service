@@ -1,4 +1,4 @@
-import SwiperComp from "../SwiperComp";
+import SwiperComp from "./SwiperComp";
 import DefaultImg from "./DefaultImg";
 import styles from "./styles.module.css";
 

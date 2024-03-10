@@ -9,7 +9,11 @@
 .screen{
   /* header:80px */
   /* footer:540px */
-  min-height: calc(100vh - 620px);
+  min-height: calc(100vh - 480px);
+}
+
+.swiper{
+  background-color: transparent;
 }
 
 .swiper-button-prev:after,

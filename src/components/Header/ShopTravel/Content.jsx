@@ -31,7 +31,7 @@ const Content = ({ children }) => {
       initial={false}
       animate={isOpen ? "open" : "closed"}
       ref={containerRef}
-      className="relative sm:block hidden"
+      className="relative sm:block hidden z-50"
     >
       <motion.button
         onClick={() => setIsOpen((isOpen) => !isOpen)}

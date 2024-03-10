@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
+import styles from './styles.module.css';
 
 const SwiperComp = ({ data }) => {
   return (
@@ -45,7 +46,7 @@ const SwiperComp = ({ data }) => {
       {data?.map((item, index) => (
         <SwiperSlide
           key={index}
-          className="rounded-2xl w-[230px] h-[300px] overflow-hidden bg-white"
+          className="rounded-2xl w-[230px] h-[300px] overflow-hidden bg-[#eff3f7]"
         >
           <div className="relative w-[230] h-[300px]">
             <Image
@@ -54,8 +55,8 @@ const SwiperComp = ({ data }) => {
               alt={`img-${index}`}
               src={item.img}
             />
-            <div className="absolute bottom-0 w-full h-[40px] px-3 flex items-center text-white font-bold">
-              {item.title}
+            <div className="absolute bottom-0 w-full h-[40px] px-3 flex items-center font-bold">
+              <p className={styles.title}>{item.title}</p>
             </div>
           </div>
         </SwiperSlide>
