@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-// import Loading from "./Loading";
-// import SearchResultCom from "./SearchResultCom";
 import { MapIcon, SearchIcon } from "@/components/Icons";
+import SearchResultComp from "./SearchResultComp";
+import Loading from "./Loading";
 
-const Origin = () => {
+const Origin = ({ title, placeholder }) => {
   const [open, setOpen] = useState(false);
   const boxRef = useRef(null);
   const [search, setSearch] = useState("");
@@ -29,7 +29,7 @@ const Origin = () => {
 
     const timeOutId = setTimeout(() => {
       setSearchResult(false);
-    }, 1000);
+    }, 50000);
 
     return () => {
       clearTimeout(timeOutId);
@@ -44,7 +44,7 @@ const Origin = () => {
       >
         <MapIcon />
         <div className="flex flex-col">
-          <span className="text-sm w-full overflow-hidden">Search places, hotels and more</span>
+          <span className="text-sm w-full overflow-hidden">{title}</span>
           <p className="text-[0.78rem] overflow-hidden w-[220px]">
             {searchVal}
           </p>
@@ -63,7 +63,7 @@ const Origin = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full h-[80%] pl-3 overflow-hidden font-bold text-2xl outline-none focus:outline-none text-[#818494]"
-            placeholder="Going to"
+            placeholder={placeholder}
           />
         </div>
         <div className="w-full h-[400px]">
@@ -75,12 +75,12 @@ const Origin = () => {
               </p>
             </div>
           )}
-          {/* {search &&
+          {search &&
             (searchResult ? (
               <Loading />
             ) : (
-              <SearchResultCom setOpen={setOpen} setSearchVal={setSearchVal} />
-            ))} */}
+              <SearchResultComp setOpen={setOpen} setSearchVal={setSearchVal} />
+            ))}
         </div>
       </div>
     </div>

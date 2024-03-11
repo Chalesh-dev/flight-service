@@ -1,3 +1,5 @@
+import { MdOutlineConnectingAirports } from "react-icons/md";
+
 export const PlaneSvg = ({ className, props }) => {
   return (
     <svg
@@ -501,3 +503,10 @@ export const HomeIcon = ({ width, className, ...rest }) => {
     </svg>
   );
 };
+
+
+export const AirportIcon = ({size}) => {
+  return(
+    <MdOutlineConnectingAirports size={size} />
+  )
+}
