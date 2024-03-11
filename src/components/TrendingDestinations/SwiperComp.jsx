@@ -13,7 +13,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const SwiperComp = ({ data }) => {
-  console.log(data);
   return (
     <Swiper
       grabCursor={true}
