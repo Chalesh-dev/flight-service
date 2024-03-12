@@ -19,7 +19,7 @@ const Tab1 = () => {
         <Button />
       </div>
       <CheckBox title="add a flight" onChange={handleCheckboxChange} />
-      <div className="md:w-1/2 w-full">
+      <div className="2xl:w-1/4 xl:w-1/2 lg:w-1/4 md:w-1/2 w-full">
         {isChecked && (
           <Origin title="Leaving from" placeholder="Leaving from" />
         )}

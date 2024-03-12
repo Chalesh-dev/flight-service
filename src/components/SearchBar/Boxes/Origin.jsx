@@ -29,7 +29,7 @@ const Origin = ({ title, placeholder }) => {
 
     const timeOutId = setTimeout(() => {
       setSearchResult(false);
-    }, 50000);
+    }, 1000);
 
     return () => {
       clearTimeout(timeOutId);

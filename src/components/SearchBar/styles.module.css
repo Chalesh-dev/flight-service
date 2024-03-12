@@ -16,6 +16,11 @@
     color: blue;
 }
 
+.rotate_180 {
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(180deg);
+}
+
 /* .item__class:hover{
     font-weight: 600;
     border-bottom: 2px solid #000;

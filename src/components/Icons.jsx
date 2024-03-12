@@ -1,3 +1,4 @@
+import { IoIosSwap, IoMdAdd } from "react-icons/io";
 import { MdOutlineConnectingAirports } from "react-icons/md";
 
 export const PlaneSvg = ({ className, props }) => {
@@ -510,3 +511,17 @@ export const AirportIcon = ({size}) => {
     <MdOutlineConnectingAirports size={size} />
   )
 }
+
+export const SwapIcon = ({size}) => {
+  return (
+    <IoIosSwap size={size} color="blue" />   
+  )
+}
+
+export const AddIcon = ({size}) => {
+  return(
+    <IoMdAdd />
+  )
+}
+
+

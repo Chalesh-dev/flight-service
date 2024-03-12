@@ -16,8 +16,8 @@ const SearchBar = () => {
       <div className='p-5'>
         {selectedTab === 'tab1' && <Tab1 />}
         {selectedTab === 'tab2' && <Tab2 />}
-        {selectedTab === 'tab3' && <Tab3 />}
-        {selectedTab === 'tab4' && <Tab4 />}
+        {/* {selectedTab === 'tab3' && <Tab3 />} */}
+        {/* {selectedTab === 'tab4' && <Tab4 />} */}
       </div>
     </div>
   )

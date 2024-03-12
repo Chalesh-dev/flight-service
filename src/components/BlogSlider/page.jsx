@@ -96,6 +96,7 @@ const images = [
 const BlogSlider = () => {
   return (
     <div className="flex flex-col mt-10 gap-6">
+      
       <h1 className="text-black text-2xl font-semibold">
         Discover your new favorite blog
       </h1>

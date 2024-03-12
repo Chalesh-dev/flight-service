@@ -20,7 +20,7 @@ const MenuTab = ({ setSelectedTab, selectedTab }) => {
           Flights
           {selectedTab === "tab2" && <ActiveBorder />}
         </li>
-        <li
+        {/* <li
           onClick={() => setSelectedTab("tab3")}
           className={`${styles.item__class} ${selectedTab === 'tab3' && styles.active}`}
         >
@@ -33,7 +33,7 @@ const MenuTab = ({ setSelectedTab, selectedTab }) => {
         >
           Things to do
           {selectedTab === "tab4" && <ActiveBorder />}
-        </li>
+        </li> */}
       </ul>
     </div>
   );
