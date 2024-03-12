@@ -13,7 +13,7 @@ const SearchBar = () => {
     <div className='w-full rounded-2xl border border-slate-300 flex flex-col'>
       <MenuTab setSelectedTab={setSelectedTab} selectedTab={selectedTab} />
 
-      <div className='p-5'>
+      <div className='xs:p-5 py-1 px-[1px]'>
         {selectedTab === 'tab1' && <Tab1 />}
         {selectedTab === 'tab2' && <Tab2 />}
         {/* {selectedTab === 'tab3' && <Tab3 />} */}

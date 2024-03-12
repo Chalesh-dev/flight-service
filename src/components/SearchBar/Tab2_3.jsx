@@ -16,13 +16,13 @@ const Tab2_3 = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 sx:mt-0 mt-5">
       <Travelers className="w-[250px] py-1" className2="!left-0" />
       {/* part 1 */}
       <div className="flex flex-col gap-2">
         <h1 className="font-bold">Flight 1</h1>
-        <div className="grid grid-cols-4 gap-3">
-          <div className="col-span-3">
+        <div className="grid sm:grid-cols-4 grid-cols-1 sm:gap-3 gap-2">
+          <div className="sm:col-span-3 col-span-1">
             <Leaving_Going />
           </div>
           <CalendarComp />
@@ -31,8 +31,8 @@ const Tab2_3 = () => {
       {/* part 2 */}
       <div className="flex flex-col gap-2">
         <h1 className="font-bold">Flight 2</h1>
-        <div className="grid grid-cols-4 gap-3">
-          <div className="col-span-3">
+        <div className="grid sm:grid-cols-4 grid-cols-1 sm:gap-3 gap-2">
+          <div className="sm:col-span-3 col-span-1">
             <Leaving_Going />
           </div>
           <CalendarComp />

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { MapIcon, SearchIcon } from "@/components/Icons";
+import { CloseIcon, MapIcon, SearchIcon } from "@/components/Icons";
 import SearchResultComp from "./SearchResultComp";
 import Loading from "./Loading";
 
@@ -56,15 +56,16 @@ const Origin = ({ title, placeholder }) => {
         ref={boxRef}
         className={`${
           open ? "flex transition-all ease-in-out duration-1000" : "hidden"
-        } absolute border border-[#818494] -top-1 -left-2 w-[380px] flex-col bg-white z-[999] rounded-lg`}
+        } sm:absolute fixed border border-[#818494] top-0 sm:-left-2 left-0 sm:w-[380px] w-full flex-col bg-white z-[999] rounded-lg`}
       >
-        <div className="w-full overflow-hidden h-[70px] border-b border-slate-500 flex items-center">
+        <div className="w-full overflow-hidden h-[70px] border-b border-slate-500 flex items-center justify-between pr-2">
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full h-[80%] pl-3 overflow-hidden font-bold text-2xl outline-none focus:outline-none text-[#818494]"
+            className="w-full h-[80%] pl-3 overflow-hidden font-bold lg:text-2xl text-sm outline-none focus:outline-none text-[#818494]"
             placeholder={placeholder}
           />
+          <CloseIcon className='cursor-pointer sm:hidden block' onClick={() => setOpen(false)} />
         </div>
         <div className="w-full h-[400px]">
           {!search && (

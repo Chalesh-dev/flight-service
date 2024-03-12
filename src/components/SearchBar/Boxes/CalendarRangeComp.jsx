@@ -18,7 +18,6 @@ const CalendarRangeComp = () => {
       key: "selection",
     },
   ]);
-  console.log("range:", format(range[0].startDate, "dd-LLL-yyyy"));
 
   //open close
   const [open, setOpen] = useState(false);
@@ -55,7 +54,7 @@ const CalendarRangeComp = () => {
   return (
     <div
       onClick={() => setOpen(true)}
-      className="w-full cursor-pointer h-[50px] border border-[#818494] rounded-md flex gap-2 items-center px-2 md:relative flex-1"
+      className="w-full cursor-pointer h-[50px] border border-[#818494] rounded-md flex gap-2 items-center px-2 lg:relative flex-1"
     >
       <CalendarIcon size={20} />
       <div className="flex flex-col">
@@ -77,7 +76,7 @@ const CalendarRangeComp = () => {
             ranges={range}
             months={2}
             direction={direction}
-            className="absolute left-[20px] top-[50px] shadow-lg rounded-md lg:left-0 border border-gray-400 z-50"
+            className="absolute left-[20px] top-[50px] shadow-lg rounded-md lg:-left-10 border border-gray-400 z-50"
           />
         )}
       </div>

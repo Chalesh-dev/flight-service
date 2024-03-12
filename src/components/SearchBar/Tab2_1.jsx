@@ -11,7 +11,7 @@ const Tab2_1 = () => {
     setIsChecked(!isChecked);
   };
   return (
-    <div className="flex md:flex-row flex-col w-full gap-2">
+    <div className="flex md:flex-row flex-col w-full gap-2 sx:mt-0 mt-5">
       <div className="flex flex-col w-full">
         <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2">
           <div className="md:col-span-2 col-span-1">

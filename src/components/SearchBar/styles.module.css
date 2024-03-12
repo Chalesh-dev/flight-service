@@ -12,6 +12,14 @@
     position: relative;
 }
 
+@media only screen and (max-width: 600px) {
+    .item__class{
+        font-size: 0.75rem;
+        margin-right: 0.1rem;
+        margin-left: 0.1rem;
+    }
+}
+
 .active{
     color: blue;
 }

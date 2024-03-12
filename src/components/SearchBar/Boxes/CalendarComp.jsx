@@ -49,9 +49,9 @@ const CalendarComp = () => {
     >
       <IoCalendarOutline size={20} />
       <div className="flex flex-col">
-        <span className={`${calendar && "text-[0.75rem]"}`}>Date</span>
+        <span className={`${calendar && "text-[0.7rem]"}`}>Date</span>
         {/* <input readOnly value={calendar} /> */}
-        <span className="text-sm">{calendar}</span>
+        <span className="sm:text-[0.8rem] text-xs">{calendar}</span>
       </div>
 
       <div ref={refOne}>

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { CalendarIcon, PersonIcon } from "@/components/Icons";
+import { CloseIcon, PersonIcon } from "@/components/Icons";
 
 const Travelers = ({ className, className2 }) => {
   const [countAdults, setCountAdults] = useState(1);
@@ -97,22 +97,31 @@ const Travelers = ({ className, className2 }) => {
   // w-full
 
   return (
-    <div
-      onClick={() => setOpen(true)}
-      className={`w-auto cursor-pointer h-[50px] border border-[#818494] rounded-md flex flex-1 gap-2 items-center px-2 relative ${className}`}
-    >
-      <PersonIcon />
-      <div className="flex flex-col">
-        <span className="text-[0.75rem]">Travelers</span>
-        {/* <input readOnly value={calendar} /> */}
-        <span className="text-sm">{total} Travelers</span>
+    <div className="relative" ref={refOne}>
+      <div
+        onClick={() => setOpen(true)}
+        className={`w-auto cursor-pointer h-[50px] border border-[#818494] rounded-md flex flex-1 gap-2 items-center px-2 ${className}`}
+      >
+        <PersonIcon />
+        <div className="flex flex-col">
+          <span className="text-[0.75rem]">Travelers</span>
+          {/* <input readOnly value={calendar} /> */}
+          <span className="text-sm">{total} Travelers</span>
+        </div>
       </div>
 
+      {/* Modal */}
       {open && (
         <div
-          className={`z-[999] w-[350px] h-auto p-3 flex flex-col gap-2 bg-white border border-slate-400 shadow-lg absolute top-[50px] right-0 rounded-md ${className2}`}
-          ref={refOne}
+          className={`${
+            open ? "flex" : "hidden"
+          } z-[999] sm:w-[350px] w-full h-auto p-3 flex-col gap-2 bg-white border border-slate-400 shadow-lg sm:absolute fixed sm:top-[50px] top-0 right-0 rounded-md ${className2}`}
+          
         >
+          <div className="w-full h-5 sm:hidden flex justify-end items-center pr-2">
+            <CloseIcon onClick={() => setOpen(false)} />
+          </div>
+
           {/* error */}
           {error && (
             <div className="w-full p-4 text-white bg-red-700 sm:text-[0.8rem] text-[0.7rem] rounded-full">
