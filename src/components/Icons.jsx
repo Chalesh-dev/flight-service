@@ -506,29 +506,85 @@ export const HomeIcon = ({ width, className, ...rest }) => {
   );
 };
 
+export const AirportIcon = ({ size }) => {
+  return <MdOutlineConnectingAirports size={size} />;
+};
 
-export const AirportIcon = ({size}) => {
-  return(
-    <MdOutlineConnectingAirports size={size} />
-  )
-}
+export const SwapIcon = ({ size }) => {
+  return <IoIosSwap size={size} color="blue" />;
+};
 
-export const SwapIcon = ({size}) => {
+export const SwapIconVertical = ({ size }) => {
+  return <IoSwapVertical size={size} color="blue" />;
+};
+
+export const AddIcon = ({ size }) => {
+  return <IoMdAdd />;
+};
+
+export const AllInclusiveIcon = ({ className }) => {
   return (
-    <IoIosSwap size={size} color="blue" />   
-  )
-}
+    <svg
+      className={className}
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      width="20px"
+      height="15px"
+    >
+      <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L10.49 12 7.8 14.39a3.38 3.38 0 1 1 .04-4.74l1.13 1 1.51-1.34L9.22 8.2A5.4 5.4 0 0 0 0 12a5.4 5.4 0 0 0 9.17 3.85l2.83-2.5 4.2-3.74a3.38 3.38 0 1 1-.04 4.74l-1.14-1.01-1.51 1.34 1.27 1.12A5.4 5.4 0 0 0 24 11.99a5.38 5.38 0 0 0-5.4-5.37z"></path>
+    </svg>
+  );
+};
 
-export const SwapIconVertical = ({size}) => {
+export const PoolIcon = ({ className }) => {
   return (
-    <IoSwapVertical size={size} color="blue" />   
-  )
-}
+    <svg
+      className={className}
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      width={20}
+      height={20}
+    >
+      <path d="M9.82 11.64h.01a4.15 4.15 0 0 1 4.36 0h.01c.76.46 1.54.47 2.29 0l.41-.23L10.48 5C8.93 3.45 7.5 2.99 5 3v2.5c1.82-.01 2.89.39 4 1.5l1 1-3.25 3.25c.27.1.52.25.77.39.75.47 1.55.47 2.3 0z"></path>
+      <path
+        fill-rule="evenodd"
+        d="M21.98 16.5c-1.1 0-1.71-.37-2.16-.64h-.01a2.08 2.08 0 0 0-2.29 0 4.13 4.13 0 0 1-4.36 0h-.01a2.08 2.08 0 0 0-2.29 0 4.13 4.13 0 0 1-4.36 0h-.01a2.08 2.08 0 0 0-2.29 0l-.03.02c-.47.27-1.08.62-2.17.62v-2c.56 0 .78-.13 1.15-.36a4.13 4.13 0 0 1 4.36 0h.01c.76.46 1.54.47 2.29 0a4.13 4.13 0 0 1 4.36 0h.01c.76.46 1.54.47 2.29 0a4.13 4.13 0 0 1 4.36 0h.01c.36.22.6.36 1.14.36v2z"
+        clip-rule="evenodd"
+      ></path>
+      <path d="M19.82 20.36c.45.27 1.07.64 2.18.64v-2a1.8 1.8 0 0 1-1.15-.36 4.13 4.13 0 0 0-4.36 0c-.75.47-1.53.46-2.29 0h-.01a4.15 4.15 0 0 0-4.36 0h-.01c-.75.47-1.55.47-2.3 0a4.15 4.15 0 0 0-4.36 0h-.01A1.8 1.8 0 0 1 2 19v2c1.1 0 1.72-.36 2.18-.63l.01-.01a2.07 2.07 0 0 1 2.3 0c1.39.83 2.97.82 4.36 0h.01a2.08 2.08 0 0 1 2.29 0h.01c1.38.83 2.95.83 4.34.01l.02-.01a2.08 2.08 0 0 1 2.29 0h.01zM19 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
+    </svg>
+  );
+};
 
-export const AddIcon = ({size}) => {
-  return(
-    <IoMdAdd />
-  )
-}
+export const HotTubIcon = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      width={20}
+      height={20}
+    >
+      <path
+        fill-rule="evenodd"
+        d="M18.65 5.86c-.6-.6-.9-1.44-.74-2.27L18 3h-1.89l-.06.43a4.27 4.27 0 0 0 1.37 3.78c.57.62.82 1.41.67 2.2l-.11.59h1.91l.06-.43a4.24 4.24 0 0 0-1.3-3.71zM9 6a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm2 6h11v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8h3v-.75A2.28 2.28 0 0 1 7.28 9c.6 0 1.24.28 1.65.73L11 12zm-4 8H5v-6h2v6zm2 0h2v-6H9v6zm6-6v6h-2v-6h2zm4 6v-6h-2v6h2zM14.65 5.86a4.24 4.24 0 0 1 1.3 3.71l-.06.43h-1.91l.11-.59c.15-.79-.1-1.58-.67-2.2a4.27 4.27 0 0 1-1.37-3.78l.06-.43H14l-.09.59c-.16.83.15 1.68.74 2.27z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+  );
+};
 
-
+export const KitchenIcon = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      width={20}
+      height={15}
+    >
+      <path d="M6 9h8v2H6V9z"></path>
+      <path d="M21 5c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1h18zm-5 11V8c0-.54-.46-1-1-1H5c-.6 0-1 .4-1 1v8c0 .5.4 1 1 1h10c.5 0 1-.5 1-1zm3 0c.6 0 1-.4 1-1s-.4-1-1-1-1 .4-1 1 .4 1 1 1zm0-4c.6 0 1-.4 1-1s-.4-1-1-1-1 .4-1 1 .4 1 1 1z"></path>
+    </svg>
+  );
+};

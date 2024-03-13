@@ -13,7 +13,10 @@ const CustomCardComponent = ({ data, className }) => {
               alt={item.content}
               fill
               objectFit="cover"
-              className="rounded-xl"
+              objectPosition="center"
+              className="rounded-xl w-full"
+              layout="fill"
+              priority
             />
           </div>
           <div className="flex flex-col gap-1 mt-2 px-1">

@@ -50,7 +50,7 @@ const SearchBox = ({
           className="w-full h-[80%] pl-3 overflow-hidden font-bold text-2xl outline-none focus:outline-none text-[#818494]"
           placeholder={placeholder}
         />
-        <CloseIcon onClick={() => setOpen(false)} />
+        <CloseIcon className='cursor-pointer' onClick={() => setOpen(false)} />
       </div>
 
       <div className="w-full h-[400px]">

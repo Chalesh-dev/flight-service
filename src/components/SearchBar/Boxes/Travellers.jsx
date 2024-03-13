@@ -118,7 +118,7 @@ const Travelers = ({ className, className2 }) => {
           } z-[999] sm:w-[350px] w-full h-auto p-3 flex-col gap-2 bg-white border border-slate-400 shadow-lg sm:absolute fixed sm:top-[50px] top-0 right-0 rounded-md ${className2}`}
           
         >
-          <div className="w-full h-5 sm:hidden flex justify-end items-center pr-2">
+          <div className="w-full h-5 sm:hidden flex justify-end items-center pr-2 cursor-pointer">
             <CloseIcon onClick={() => setOpen(false)} />
           </div>
 
