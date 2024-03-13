@@ -1,5 +1,7 @@
 .default_image {
   aspect-ratio: 21/9;
+  width: 100%;
+  max-width: 100%;
 }
 
 .title{
