@@ -7,7 +7,10 @@ const DefaultImg = () => {
       <Image
         className="object-cover rounded-2xl"
         objectFit="cover"
+        objectPosition="center"
+        priority={false}
         src="/images/default.avif"
+        layout="fill"
         fill
         alt="default"
       />
