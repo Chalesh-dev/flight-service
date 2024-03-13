@@ -20,11 +20,14 @@ const ImgSlider = ({ data }) => {
       {data?.map((item, index) => (
         <SwiperSlide
           key={index}
-          className="rounded-l-xl w-full h-full bg-[#eff3f7] overflow-hidden"
+          className="sm:rounded-l-xl rounded-t-xl w-full h-full bg-[#eff3f7] overflow-hidden"
         >
           <Image
             fill
+            priority
             className="overflow-hidden object-cover"
+            objectFit="cover"
+            objectPosition="center"
             alt={`img-${index}`}
             src={item}
           />

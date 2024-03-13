@@ -6,6 +6,15 @@ import Sorting from "@/components/SearchResultPage/Sorting/page";
 import React from "react";
 
 const Search = () => {
+  const images = [
+    "/images/home/1.jfif",
+    "/images/home/2.jfif",
+    "/images/home/3.jfif",
+    "/images/home/4.jfif",
+    "/images/home/5.jfif",
+    "/images/home/6.jfif",
+  ];
+
   return (
     <div className="grid grid-cols-7 gap-5">
       <div className="2xl:col-span-6 xl:col-span-7 lg:col-span-6 col-span-7 flex flex-col gap-3">
@@ -25,7 +34,7 @@ const Search = () => {
           <Sidebar />
           <div className="lg:col-span-3 col-span-4 gap-5 w-full flex flex-col">
             <Sorting />
-            <Content />
+            <Content images={images} />
           </div>
         </div>
       </div>

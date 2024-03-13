@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { CloseIcon, PersonIcon } from "@/components/Icons";
 
-const Travelers = ({ className, className2 }) => {
+const Travelers = ({ className, className2, room }) => {
   const [countAdults, setCountAdults] = useState(1);
   const [countChildren, setCountChildren] = useState(0);
   const [countInfants, setCountInfants] = useState(0);
@@ -106,7 +106,7 @@ const Travelers = ({ className, className2 }) => {
         <div className="flex flex-col">
           <span className="text-[0.75rem]">Travelers</span>
           {/* <input readOnly value={calendar} /> */}
-          <span className="text-sm">{total} Travelers</span>
+          <span className="text-sm">{total} Travelers {room && '& 1 room'}</span>
         </div>
       </div>
 
@@ -130,6 +130,9 @@ const Travelers = ({ className, className2 }) => {
           )}
 
           {/* row 1 */}
+          {
+            room && (<p className="text-sm w-full px-2 py-0">Room 1</p>)
+          }
           <div className="w-full flex justify-between gap-2 p-2">
             <div className="flex items-center">
               <span>Adults</span>

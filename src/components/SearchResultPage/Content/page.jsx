@@ -9,19 +9,11 @@ import Link from "next/link";
 import React from "react";
 import ImgSlider from "./ImgSlider";
 
-const images = [
-  "/images/home/1.jfif",
-  "/images/home/2.jfif",
-  "/images/home/3.jfif",
-  "/images/home/4.jfif",
-  "/images/home/5.jfif",
-  "/images/home/6.jfif",
-];
-
-const Content = () => {
+const Content = ({ images }) => {
   const Card = ({
     href,
     title,
+    features,
     description,
     allInclusive,
     poolIncluded,
@@ -35,6 +27,7 @@ const Content = () => {
     initialPrice,
     discountedPrice,
     finalPrice,
+    images,
   }) => {
     return (
       <div className="grid sm:grid-cols-3 grid-cols-1 sm:grid-rows-1 grid-rows-2 rounded-xl border border-slate-400 shadow-xl drop-shadow-xl">
@@ -43,9 +36,9 @@ const Content = () => {
 
         {/* content */}
         <Link href={href} className="sm:col-span-2 col-span-1">
-          <div className="flex flex-col sm:p-3 p-1 gap-2">
+          <div className="flex flex-col sm:p-3 p-2 gap-2">
             <h2 className="text-lg font-bold">{title}</h2>
-            <p className="text-[0.7rem]">{description}</p>
+            <p className="text-[0.7rem]">{features}</p>
             {/* items included */}
             <div className="flex gap-3 items-center">
               {allInclusive && (
@@ -76,8 +69,9 @@ const Content = () => {
               )}
             </div>
             {/* bottom div */}
-            <div className="flex mt-5">
+            <div className="flex mt-2">
               <div className="flex flex-col w-1/2 justify-start">
+                {description && <p className="sm:text-xs text-[0.65rem]">{description}</p>}
                 <div className="flex flex-col">
                   {fullyRefunded && (
                     <p className="text-green-500 text-[0.8rem]">
@@ -115,7 +109,7 @@ const Content = () => {
               </div>
               <div className="flex flex-col gap-1 w-1/2 items-end">
                 {special && (
-                  <div className="bg-[#227950] text-white text-xs py-2 px-2 min-w-[115px] rounded-md shadow-md flex justify-center items-center mb-2">
+                  <div className="bg-[#227950] text-white sm:text-xs text-[0.65rem] py-2 px-2 sm:min-w-[115px] min-w-[100px] rounded-md shadow-md flex justify-center items-center mb-2">
                     {special}
                   </div>
                 )}
@@ -151,9 +145,28 @@ const Content = () => {
     <div className="w-full flex flex-col gap-2">
       <Card
         href="/search"
-        title="Sandles Inn"
-        description="fully furnished"
-        allInclusive={true}
+        title="Still Waters Resort"
+        features="Entire condo - Indian point"
+        description="Daily activities, 3 pools, 2 hot tubs, New Oasis Plunge Water slide, Free Mini golf, Paddle boats, Kayaks, Shuttle to theme park"
+        allInclusive={false}
+        poolIncluded={true}
+        hotTubIncluded={true}
+        kitchenIncluded={false}
+        fullyRefunded={true}
+        reserveNow={true}
+        rated={9.6}
+        reviews={1550}
+        special="We have 3 left at"
+        initialPrice={250}
+        discountedPrice={168}
+        finalPrice={198}
+        images={images}
+      />
+      <Card
+        href="/search"
+        title="Still Waters Resort"
+        features="Entire condo Indian point"
+        allInclusive={false}
         poolIncluded={false}
         hotTubIncluded={true}
         kitchenIncluded={false}
@@ -161,10 +174,11 @@ const Content = () => {
         reserveNow={true}
         rated={9.6}
         reviews={1550}
-        special='We have 3 left at'
+        special="We have 3 left at"
         initialPrice={250}
         discountedPrice={168}
         finalPrice={198}
+        images={images}
       />
       <Card
         href="/search"
@@ -177,11 +191,12 @@ const Content = () => {
         reserveNow={false}
         rated={9}
         reviews={1850}
-        special='We have 1 left at 10% off at'
+        special="We have 1 left at 10% off at"
         leftRoom={3}
         initialPrice={380}
         discountedPrice={268}
         finalPrice={698}
+        images={images}
       />
       <Card
         href="/search"
@@ -198,6 +213,7 @@ const Content = () => {
         initialPrice={380}
         discountedPrice={268}
         finalPrice={698}
+        images={images}
       />
       <Card
         href="/search"
@@ -208,18 +224,21 @@ const Content = () => {
         kitchenIncluded={true}
         fullyRefunded={true}
         reserveNow={false}
-        special='We have 1 left at'
+        special="We have 1 left at"
         rated={6}
         reviews={1850}
         leftRoom={1}
         initialPrice={380}
         discountedPrice={268}
         finalPrice={698}
+        images={images}
       />
       <Card
         href="/search"
         title="Sandles Inn"
-        allInclusive={false}
+        features='beautiful places'
+        allInclusive={true}
+        description="Daily activities, 3 pools, 2 hot tubs, New Oasis Plunge Water slide, Free Mini golf, Paddle boats, Kayaks, Shuttle to theme park"
         poolIncluded={false}
         hotTubIncluded={false}
         kitchenIncluded={false}
@@ -228,10 +247,11 @@ const Content = () => {
         rated={7}
         reviews={50}
         leftRoom={0}
-        special='We have 2 left at'
-        initialPrice={380}
+        special="We have 2 left at"
+        // initialPrice={380}
         discountedPrice={268}
         finalPrice={698}
+        images={images}
       />
     </div>
   );
