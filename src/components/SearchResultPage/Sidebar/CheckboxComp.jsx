@@ -1,4 +1,4 @@
-const CheckboxComp = ({ onChangeHandler, checkedHandler, title, key, name }) => {
+const CheckboxComp = ({ onChangeHandler, checkedHandler, title, key, name, className, disabled }) => {
   return (
     <div class="inline-flex items-center" key={key}>
       <label
@@ -7,12 +7,13 @@ const CheckboxComp = ({ onChangeHandler, checkedHandler, title, key, name }) => 
       >
         <input
           name={name}
+          disabled={disabled}
           //   ref={checked}
           checked={checkedHandler}
           onChange={onChangeHandler}
           //   defaultChecked={checked}
           type="checkbox"
-          class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-gray-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-900 checked:bg-blue-900 checked:before:bg-blue-900 hover:before:opacity-10"
+          class={`${disabled && 'bg-[#c1c2c7]'} before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-gray-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-900 checked:bg-blue-900 checked:before:bg-blue-900 hover:before:opacity-10`}
         />
         <span class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
           <svg
@@ -32,10 +33,10 @@ const CheckboxComp = ({ onChangeHandler, checkedHandler, title, key, name }) => 
         </span>
       </label>
       <label
-        class="mt-px font-light text-gray-700 cursor-pointer select-none"
+        class={`${className} mt-px font-light text-gray-700 cursor-pointer select-none`}
         htmlFor={title}
       >
-        <span className="text-[0.75rem] font-bold">{title}</span>
+        <span className={`text-xs font-bold ${disabled && 'text-[#c1c2c7]'}`}>{title}</span>
       </label>
     </div>
   );

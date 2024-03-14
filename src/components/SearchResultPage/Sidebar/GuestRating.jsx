@@ -12,7 +12,7 @@ const GuestRating = () => {
     <div className="flex flex-col gap-2">
       <p className="font-semibold text-sm">Guest rating</p>
       {filters.map((item, index) => (
-        <RadioBoxComp key={index} title={item} value={item} type='radio' name={item} />
+        <RadioBoxComp key={index} title={item} value={item} name={item} />
       ))}
     </div>
   )

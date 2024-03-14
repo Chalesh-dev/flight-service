@@ -1,10 +1,15 @@
 import React from "react";
 
-const RadioBoxComp = ({title, key, name, value}) => {
+const RadioBoxComp = ({ title, key, name, value }) => {
   return (
-    <label class="flex radio p-2 cursor-pointer w-2/3" key={key}>
-      <input class="my-auto transform scale-150 cursor-pointer" type="radio" name={name} value={value} />
-      <div class="title px-4">{title}</div>
+    <label className="flex radio p-2 cursor-pointer w-auto" key={key}>
+      <input
+        className="my-auto transform cursor-pointer  before:content[''] peer relative h-5 w-5 rounded-full appearance-none border border-gray-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-400 checked:border-2 checked:bg-blue-900 checked:before:bg-blue-900 hover:before:opacity-10"
+        type="radio"
+        name={name}
+        value={value}
+      />
+      <div className="title px-3 text-sm">{title}</div>
     </label>
   );
 };

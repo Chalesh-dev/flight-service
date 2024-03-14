@@ -1,5 +1,3 @@
-import React from "react";
-import CustomFilters from "./CheckboxComp";
 import CheckboxComp from "./CheckboxComp";
 
 const filters = [

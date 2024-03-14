@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
+import styles from "./styles.module.css";
 
 const ImgSlider = ({ data }) => {
   return (
@@ -18,10 +19,7 @@ const ImgSlider = ({ data }) => {
       slidesPerView={1}
     >
       {data?.map((item, index) => (
-        <SwiperSlide
-          key={index}
-          className="sm:rounded-l-xl rounded-t-xl w-full h-full bg-[#eff3f7] overflow-hidden"
-        >
+        <SwiperSlide key={index} className={styles.imgSlider}>
           <Image
             fill
             priority

@@ -6,6 +6,9 @@ import PopularFilters from "./PopularFilters";
 import PricePerNight from "./PricePerNight";
 import GuestRating from "./GuestRating";
 import StarRating from "./StarRating";
+import PaymentType from "./PaymentType";
+import Cancellation from "./Cancellation";
+import Type from "./Type";
 
 const Sidebar = () => {
   return (
@@ -20,6 +23,9 @@ const Sidebar = () => {
       <PricePerNight />
       <GuestRating />
       <StarRating />
+      <PaymentType />
+      <Cancellation />
+      <Type />
     </div>
   );
 };

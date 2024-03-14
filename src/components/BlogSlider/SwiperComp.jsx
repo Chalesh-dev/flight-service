@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
 import styles from './styles.module.css';
+import Link from "next/link";
 
 const SwiperComp = ({ data }) => {
   return (
@@ -48,7 +49,7 @@ const SwiperComp = ({ data }) => {
           key={index}
           className="rounded-2xl w-[230px] h-[300px] overflow-hidden bg-[#eff3f7]"
         >
-          <div className="relative w-[230] h-[300px]">
+          <Link href='/search' className="relative block w-[230] h-[300px]">
             <Image
               fill
               className="rounded-2xl overflow-hidden object-cover"
@@ -58,7 +59,7 @@ const SwiperComp = ({ data }) => {
             <div className="absolute bottom-0 w-full h-[40px] px-3 flex items-center font-bold">
               <p className={styles.title}>{item.title}</p>
             </div>
-          </div>
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
