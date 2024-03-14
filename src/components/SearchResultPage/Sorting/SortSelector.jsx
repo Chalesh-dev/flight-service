@@ -18,7 +18,7 @@ const SortSelector = () => {
           aria-selected="false"
           data-opt-id="RECOMMENDED"
         >
-          Recommended
+          Recommendedgit pull
         </option>
         <option
           value="PRICE_LOW_TO_HIGH"
