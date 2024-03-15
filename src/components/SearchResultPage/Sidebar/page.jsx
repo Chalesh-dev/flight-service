@@ -9,6 +9,11 @@ import StarRating from "./StarRating";
 import PaymentType from "./PaymentType";
 import Cancellation from "./Cancellation";
 import Type from "./Type";
+import MealPlan from "./MealPlan";
+import OneKeyBenefits from "./OneKeyBenefits";
+import Accessibility from "./Accessibility";
+import TravelerExperience from "./TravelerExperience";
+import Amenities from "./Amenities";
 
 const Sidebar = () => {
   return (
@@ -26,6 +31,11 @@ const Sidebar = () => {
       <PaymentType />
       <Cancellation />
       <Type />
+      <MealPlan />
+      <Amenities />
+      <OneKeyBenefits />
+      <Accessibility />
+      <TravelerExperience />
     </div>
   );
 };

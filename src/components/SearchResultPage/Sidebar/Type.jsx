@@ -13,7 +13,7 @@ const filters = [
 
 const Type = () => {
   return (
-    <div className="flex flex-col gap-2 mt-8">
+    <div className="flex flex-col gap-1 mt-8">
       <p className="font-semibold text-sm">Property type</p>
       {filters.map((item, index) => (
         <CheckboxComp key={index} title={item} name={item} />
