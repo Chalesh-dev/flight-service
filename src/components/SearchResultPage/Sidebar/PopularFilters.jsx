@@ -1,4 +1,5 @@
 import CheckboxComp from "./CheckboxComp";
+import SeeMoreLess from "./SeeMoreLess";
 
 const filters = [
   "All inclusive",
@@ -12,9 +13,11 @@ const PopularFilters = () => {
   return (
     <div className="flex flex-col gap-2">
       <p className="font-semibold text-sm">Popular filters</p>
-      {filters.map((item, index) => (
-        <CheckboxComp key={index} title={item} name={item} />
-      ))}
+      <SeeMoreLess filters={filters}>
+        {filters.map((item, index) => (
+          <CheckboxComp key={index} title={item} name={item} />
+        ))}
+      </SeeMoreLess>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import Map from "@/components/MobileViewSearch/Map";
+import Sort_filter from "@/components/MobileViewSearch/Sort_filter";
 import Advertise from "@/components/SearchResultPage/Advertise";
 import Content from "@/components/SearchResultPage/Content/page";
 import SearchComp from "@/components/SearchResultPage/SearchComp";
@@ -22,11 +24,15 @@ const Search = () => {
 
         {/* MobileView(sort & filter & map & properties) */}
         <div className="lg:hidden flex flex-col gap-2">
-          <div className="grid grid-cols-3 gap-3">
-            <div className="col-span-2 bg-pink-400">sort & filter</div>
-            <div className="bg-lime-600">view in map</div>
+          <div className="grid sm:grid-cols-3 grid-cols-2 gap-1">
+            <div className="sm:col-span-2 col-span-1">
+              <Sort_filter />
+            </div>
+            <div className="col-span-1">
+              <Map />
+            </div>
           </div>
-          <div className="w-full bg-cyan-400">properties</div>
+          <div className="w-full flex justify-center items-center text-sm">300+ properties</div>
         </div>
 
         {/* sidebar & sorting $ content */}

@@ -1,14 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const SeeMoreLess = ({ filters, children }) => {
   const [more, setMore] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (more) {
+      const childrenHeight = containerRef.current.scrollHeight;
+      const newHeight = childrenHeight + 30;
+      containerRef.current.style.height = `${newHeight}px`;
+    } else {
+      containerRef.current.style.height = '140px';
+    }
+  }, [more, filters]);
+
   return (
     <div
-      className={`w-full flex flex-col gap-1 pl-3 pt-3 ${
-        more ? "h-auto" : "h-[140px]"
-      } overflow-hidden relative`}
+      ref={containerRef}
+      className="w-full flex flex-col gap-1 pl-3 pt-3 overflow-hidden relative"
     >
       {children}
       {filters?.length > 3 && (

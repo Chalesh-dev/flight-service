@@ -602,3 +602,24 @@ export const StarIcon = ({ className }) => {
     </svg>
   );
 };
+
+export const SortFilterIcon = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      aria-describedby="tune-description"
+      role="img"
+      viewBox="0 0 24 24"
+      width={20}
+      height={17}
+      fill="#1668e3"
+    >
+      <desc id="tune-description">reveals sort and filter window</desc>
+      <path
+        fill-rule="evenodd"
+        d="M17 9h-2V3h2v2h4v2h-4v2zM3 7V5h10v2H3zm0 12v-2h6v2H3zm10 2v-2h8v-2h-8v-2h-2v6h2zM7 11V9h2v6H7v-2H3v-2h4zm14 2v-2H11v2h10z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+  );
+};
