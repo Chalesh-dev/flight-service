@@ -22,7 +22,7 @@ const TravelerExperience = () => {
   return (
     <div className="flex flex-col gap-1 mt-8">
       <p className="font-semibold text-sm">Traveler experience</p>
-      {/* <SeeMoreLess> */}
+      <SeeMoreLess filters={filters}>
         {filters.map((item, index) => (
           <CheckboxComp
             key={index}
@@ -31,7 +31,7 @@ const TravelerExperience = () => {
             disabled={index === filters.length - 1 && "disabled"}
           />
         ))}
-      {/* </SeeMoreLess> */}
+      </SeeMoreLess>
     </div>
   );
 };

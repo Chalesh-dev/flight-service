@@ -1,4 +1,5 @@
 import CheckboxComp from "./CheckboxComp";
+import SeeMoreLess from "./SeeMoreLess";
 
 const filters = [
   "Elevator",
@@ -15,14 +16,16 @@ const Accessibility = () => {
   return (
     <div className="flex flex-col gap-1 mt-8">
       <p className="font-semibold text-sm">Accessibility</p>
-      {filters.map((item, index) => (
-        <CheckboxComp
-          key={index}
-          title={item}
-          name={item}
-          disabled={index === filters.length - 1 && "disabled"}
-        />
-      ))}
+      <SeeMoreLess filters={filters}>
+        {filters.map((item, index) => (
+          <CheckboxComp
+            key={index}
+            title={item}
+            name={item}
+            disabled={index === filters.length - 1 && "disabled"}
+          />
+        ))}
+      </SeeMoreLess>
     </div>
   );
 };

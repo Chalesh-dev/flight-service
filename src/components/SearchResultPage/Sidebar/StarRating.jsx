@@ -17,7 +17,8 @@ const StarRating = () => {
           <div
             key={item}
             className={`w-[50px] h-[35px] border border-slate-400 flex justify-center items-center rounded-lg gap-1 cursor-pointer ${
-              active === item && "border-2 border-slate-600 bg-slate-300 text-sm"
+              active === item &&
+              "border-2 border-slate-600 bg-slate-300 text-sm"
             }`}
             onClick={() => handleClick(item)}
           >

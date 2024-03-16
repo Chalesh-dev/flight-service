@@ -1,14 +1,24 @@
 "use client";
-const SeeMoreLess = ({ children }) => {
-  const handleClick = () => {
-    alert('more')
-  };
+
+import { useState } from "react";
+
+const SeeMoreLess = ({ filters, children }) => {
+  const [more, setMore] = useState(false);
   return (
-    <div className="w-full flex flex-col gap-1 h-[120px] overflow-hidden relative">
+    <div
+      className={`w-full flex flex-col gap-1 pl-3 pt-3 ${
+        more ? "h-auto" : "h-[140px]"
+      } overflow-hidden relative`}
+    >
       {children}
-      <p className="text-blue-500 mt-4 cursor-pointer absolute  bottom-2" onClick={handleClick}>
-        See More
-      </p>
+      {filters?.length > 3 && (
+        <div
+          className="text-blue-500 text-sm cursor-pointer pl-2 absolute -bottom-2 flex items-center w-full bg-[#eff3f7] h-[40px] z-50"
+          onClick={() => setMore(!more)}
+        >
+          {more ? "See Less" : "See More"}
+        </div>
+      )}
     </div>
   );
 };
