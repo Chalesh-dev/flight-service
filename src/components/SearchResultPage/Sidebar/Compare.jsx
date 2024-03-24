@@ -2,7 +2,7 @@ import React from "react";
 
 const Compare = () => {
   return (
-    <div className="flex py-2 px-3 items-center justify-around border border-[#818494] h-[50px] rounded-lg">
+    <div className="flex py-2 px-3 items-center justify-between border border-[#818494] h-[50px] rounded-lg">
       <span className="2xl:text-xs lg:text-sm text-slate-500">Compare properties</span>
       <label class="inline-flex items-center cursor-pointer">
         <input type="checkbox" value="" class="sr-only peer" />

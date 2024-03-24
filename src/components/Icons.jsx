@@ -296,11 +296,12 @@ export const ArrowDownIcon = ({ className, ...rest }) => {
   );
 };
 
-export const CloseIcon = ({ onClick, className, ...rest }) => {
+export const CloseIcon = ({ onClick, className, fill }) => {
   return (
     <svg
       className={className}
       onClick={onClick}
+      fill={fill}
       height="24px"
       version="1.1"
       viewBox="0 0 512 512"

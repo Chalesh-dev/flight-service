@@ -24,18 +24,18 @@ const Sidebar = () => {
       <SearchBox />
       {/* filters */}
       <h1 className="text-2xl font-bold my-1">Filter by</h1>
-      <PopularFilters />
+      <PopularFilters className="bg-[#eff3f7]" />
       <PricePerNight />
-      <GuestRating />
+      <GuestRating className="bg-[#eff3f7]" />
       <StarRating />
       <PaymentType />
       <Cancellation />
-      <Type />
-      <MealPlan />
-      <Amenities />
+      <Type className="bg-[#eff3f7]" />
+      <MealPlan className="bg-[#eff3f7]" />
+      <Amenities className="bg-[#eff3f7]" />
       <OneKeyBenefits />
-      <Accessibility />
-      <TravelerExperience />
+      <Accessibility className="bg-[#eff3f7]" />
+      <TravelerExperience className="bg-[#eff3f7]" />
     </div>
   );
 };

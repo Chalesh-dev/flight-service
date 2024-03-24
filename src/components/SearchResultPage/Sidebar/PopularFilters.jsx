@@ -9,11 +9,11 @@ const filters = [
   "Ocean view",
 ];
 
-const PopularFilters = () => {
+const PopularFilters = ({ className }) => {
   return (
     <div className="flex flex-col gap-2">
       <p className="font-semibold text-sm">Popular filters</p>
-      <SeeMoreLess filters={filters}>
+      <SeeMoreLess filters={filters} className={className}>
         {filters.map((item, index) => (
           <CheckboxComp key={index} title={item} name={item} />
         ))}

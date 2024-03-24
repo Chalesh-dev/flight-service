@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import LayoutUi from "@/components/LayoutUi";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="min-h-screen flex flex-col bg-[#eff3f7]">
           <Header />
-          <div className="xl:px-80 sm:px-10 px-4 pb-16 pt-10 screen">{children}</div>
+          <div className="xl:px-80 sm:px-10 px-4 pb-16 pt-10 screen">
+            <LayoutUi>{children}</LayoutUi>
+          </div>
           <Footer />
         </div>
       </body>

@@ -1,5 +1,3 @@
-import { ArrowDownIcon } from "@/components/Icons";
-import styles from "./styles.module.css";
 
 const SortSelector = () => {
   return (

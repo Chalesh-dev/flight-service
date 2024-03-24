@@ -24,11 +24,11 @@ const filters = [
   "Bar",
 ];
 
-const Amenities = () => {
+const Amenities = ({className}) => {
   return (
     <div className="flex flex-col gap-1 mt-8">
       <p className="font-semibold text-sm">Amenities</p>
-      <SeeMoreLess filters={filters}>
+      <SeeMoreLess filters={filters} className={className}>
         {filters.map((item, index) => (
           <CheckboxComp
             key={index}

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const SeeMoreLess = ({ filters, children }) => {
+const SeeMoreLess = ({ filters, children, className }) => {
   const [more, setMore] = useState(false);
   const containerRef = useRef(null);
 
@@ -24,7 +24,7 @@ const SeeMoreLess = ({ filters, children }) => {
       {children}
       {filters?.length > 3 && (
         <div
-          className="text-blue-500 text-sm cursor-pointer pl-2 absolute -bottom-2 flex items-center w-full bg-[#eff3f7] h-[40px] z-50"
+          className={`${className} text-blue-500 text-sm cursor-pointer pl-2 absolute -bottom-2 flex items-center w-full h-[40px] z-50`}
           onClick={() => setMore(!more)}
         >
           {more ? "See Less" : "See More"}
