@@ -30,7 +30,10 @@ const Blogs = () => {
     },
   ];
 
-  console.log(latest.image_url, "wqwq");
+  // const handleChange = (page) => {
+  //   console.log(page);
+  // }
+
   return (
     <div className="px-[15%]">
       {/* latest article */}
@@ -61,6 +64,7 @@ const Blogs = () => {
           color="warning"
           total={10}
           initialPage={1}
+          // onChange={handleChange}
         />
       </div>
     </div>
