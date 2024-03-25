@@ -20,8 +20,8 @@ const EditForm = ({ setOpenEdit, openEdit }) => {
   return (
     <div className="relative w-full min-h-screen">
       <div className="fixed top-0 right-0 bg-slate-500 w-full min-h-screen opacity-70 z-50" />
-      <form className="md:w-3/4 w-[99%] md:h-[90%] h-[99%] fixed md:top-[50px] top-0 left-0 right-0 m-auto bg-white z-[5000] rounded-lg p-5 shadow-2xl drop-shadow-xl flex flex-col">
-        <div className="flex justify-between w-full mb-4">
+      <form className="md:w-3/4 w-[99%] md:h-[90%] h-[99%] fixed md:top-[50px] sm:rounded-lg top-0 left-0 right-0 m-auto bg-white z-[5000] shadow-2xl drop-shadow-xl flex flex-col">
+        <div className="flex justify-between w-full mb-4 shadow-xl drop-shadow-xl py-3 px-3">
           <div className="flex justify-center items-center gap-2">
             <CloseIcon
               fill="blue"
@@ -32,7 +32,7 @@ const EditForm = ({ setOpenEdit, openEdit }) => {
           </div>
           <div className="text-base font-bold text-blue-700 cursor-pointer">clear</div>
         </div>
-        <form className="flex flex-col overflow-y-scroll w-full px-1 h-full">
+        <form className="flex flex-col overflow-y-scroll w-full px-4 py-2 h-full">
             <Compare />
             <Line />
             <SortSelector />

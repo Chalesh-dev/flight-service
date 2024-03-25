@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import LayoutUi from "@/components/LayoutUi";
+import AdvertiseLayout from "@/components/AdvertiseLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,13 +24,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-h-screen flex flex-col bg-[#eff3f7]">
+        <AdvertiseLayout>
           <Header />
           <div className="xl:px-80 sm:px-10 px-4 pb-16 pt-10 screen">
             <LayoutUi>{children}</LayoutUi>
           </div>
           <Footer />
-        </div>
+        </AdvertiseLayout>
       </body>
     </html>
   );

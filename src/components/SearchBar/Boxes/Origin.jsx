@@ -44,7 +44,7 @@ const Origin = ({ title, placeholder }) => {
       >
         <MapIcon />
         <div className="flex flex-col">
-          <span className="text-sm w-full overflow-hidden">{title}</span>
+          <span className="text-[0.7rem] w-full overflow-hidden">{title}</span>
           <p className="text-[0.78rem] overflow-hidden w-[220px]">
             {searchVal}
           </p>

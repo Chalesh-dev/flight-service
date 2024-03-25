@@ -104,9 +104,9 @@ const Travelers = ({ className, className2, room }) => {
       >
         <PersonIcon />
         <div className="flex flex-col">
-          <span className="text-[0.75rem]">Travelers</span>
+          <span className="text-[0.7rem]">Travelers</span>
           {/* <input readOnly value={calendar} /> */}
-          <span className="text-sm">{total} Travelers {room && '& 1 room'}</span>
+          <span className="text-[0.7rem]">{total} Travelers {room && '& 1 room'}</span>
         </div>
       </div>
 

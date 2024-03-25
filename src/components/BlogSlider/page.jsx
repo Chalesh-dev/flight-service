@@ -1,6 +1,7 @@
 import SwiperComp from "./SwiperComp";
 import DefaultImg from "./DefaultImg";
 import styles from "./styles.module.css";
+import Advertise from "../Advertise";
 
 const images = [
   {
@@ -103,6 +104,8 @@ const BlogSlider = () => {
 
       {/* Image slider */}
       <SwiperComp data={images} />
+
+      <Advertise imgPath="/images/ads/ad11.jfif" />
 
       {/* default image */}
       <figure className={styles.default_image}>

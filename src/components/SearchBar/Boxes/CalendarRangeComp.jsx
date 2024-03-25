@@ -58,9 +58,9 @@ const CalendarRangeComp = () => {
     >
       <CalendarIcon size={20} />
       <div className="flex flex-col">
-        <span className="text-[0.75rem]">Date</span>
+        <span className="lg:text-[0.7rem] text-[0.65rem]">Date</span>
         {/* <input readOnly value={calendar} /> */}
-        <span className="text-[0.78rem]">
+        <span className="text-[0.7rem]">
           {format(range[0].startDate, "dd-LLL-yyyy")} to{" "}
           {format(range[0].endDate, "dd-LLL-yyyy")}
         </span>
