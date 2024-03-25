@@ -45,12 +45,12 @@ const MobileView = () => {
         </div>
         <ul className="w-full py-3">
           <li className="hover:bg-slate-200 w-full border-slate-600 py-4">
-            <Link href="/" className="px-8">
-              Trips
+            <Link href="/blogs" className="px-8">
+              Blogs
             </Link>
           </li>
           <li className="py-4 hover:bg-slate-200 w-full  border-slate-600">
-            <Link href="/gallery" className="px-8">
+            <Link href="https://www.expedia.com/helpcenter/" className="px-8">
               Support
             </Link>
           </li>
