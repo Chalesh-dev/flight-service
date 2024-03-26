@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoEyeOutline } from "react-icons/io5";
 
-const LatestBlog = ({ image, date, view, title, summary, key, slug }) => {
+const LatestBlog = ({ image, date, view, title, summary, key, slug, className, className2 }) => {
   console.log(slug);
   return (
     <div className="w-full flex flex-col mb-10" key={key}>
@@ -21,11 +21,11 @@ const LatestBlog = ({ image, date, view, title, summary, key, slug }) => {
         </div>
       </div>
       <Link href={`blogs/${slug}`}>
-        <h1 className="hover:text-green-500 w-auto lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold">
+        <h1 className={`${className} hover:text-green-500 w-auto font-bold`}>
           {title}
         </h1>
       </Link>
-      <p className="text-[#747577] mt-4">{summary}</p>
+      <p className={`${className2} text-[#747577] mt-4 text-base`}>{summary}</p>
     </div>
   );
 };

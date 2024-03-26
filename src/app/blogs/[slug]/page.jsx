@@ -168,7 +168,7 @@ const SingleBlog = ({ params }) => {
         <h2 className="mb-8 text-center md:text-5xl sm:text-4xl text-3xl font-bold">
           Similar Posts
         </h2>
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 items-start">
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 items-start">
           {blogs.map((item, index) => (
             <LatestBlog
               image={item.image}
@@ -178,6 +178,8 @@ const SingleBlog = ({ params }) => {
               summary={item.summary}
               key={index}
               slug={item.slug}
+              className="lg:text-2xl md:text-xl sm:text-lg text-base"
+              className2="md:text-[0.85rem] md:leading-[1.25rem] text-[0.775rem] leading-[1rem]"
             />
           ))}
         </div>
